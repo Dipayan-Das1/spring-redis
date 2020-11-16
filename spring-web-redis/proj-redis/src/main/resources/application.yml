@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: local
+
+---
+
+spring:
+  profile: local
+redis:
+  host: localhost
+  port: 6379
+  jedis:
+    pool:
+      max-total: 8
+      max-idle: 8
+      min-idle: 2
+
+---
+spring:
+  profile: test
+  redis:
+    host: localhost
+    port: 6370
